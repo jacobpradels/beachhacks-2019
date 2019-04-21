@@ -24,7 +24,6 @@ def detect_faces(path):
     # Names of likelihood from google.cloud.vision.enums
     likelihood_name = ('UNKNOWN', 'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE',
                        'LIKELY', 'VERY_LIKELY')
-    print('Faces:')
     class moodPoint:
         def __init__(self, anger, joy, surprise):
             self.anger = anger
@@ -36,3 +35,4 @@ def detect_faces(path):
     return moodArray
 
 
+# print(len(detect_faces("./frame0.jpg")))
