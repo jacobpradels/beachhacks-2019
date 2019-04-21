@@ -18,15 +18,21 @@ def main():
     take_a_pic()
     try:
         emotionInfo = []
+        #detect faces returns a list of the face objects
         frame = detect_faces("frame0.jpg")
 
+        #This loop is to seperate the list of faces and add them one by one into the list of emotion data
         for people in frame:
             emotionData.append(people)
+        #Prints the total amount of faces we have in our data
         print(len(emotionData))
+        #Goes through every face and calculates its data
         for g in emotionData:
             print(g.anger,g.joy,g.surprise)
+            #Determine salt returns a list in the form [angervalue, joyvalue, surprisevalue]
             emotionInfo = determineSalt(emotionData)
             print(emotionInfo)
+        #This function updates all of the gauges for emotions
         switchBar(emotionInfo)
     except FileExistsError:
         print('no faces')
