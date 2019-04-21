@@ -21,6 +21,6 @@ var client = new tmi.client(options);
 client.connect();
 
 client.on('connected', function(address,port){
-    client.action("beachhack_bot","POGGERS s in the chat");
+    client.action("beachhack_bot","AYAYA");
     process.exit(1); 
 });
