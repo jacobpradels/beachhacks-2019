@@ -12,3 +12,4 @@ def take_a_pic():
     pic = cv2.imwrite(name, frame)  # save frame as JPEG file
     count += 1
 
+take_a_pic()
