@@ -5,7 +5,7 @@ import os
 from google.cloud import vision
 from google.cloud.vision import types
 from PIL import Image, ImageDraw
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:\\Users\\Jake\\Documents\\beachhacks2019\\googlecloudapi\\BeachHacks2019-858fb3db009f.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"C:\Users\Kathy\Desktop\StreamerEnv\BeachHacks2019-858fb3db009f.json"
 # Instantiates a client
 
 def detect_faces(path):

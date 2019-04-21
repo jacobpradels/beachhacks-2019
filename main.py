@@ -14,7 +14,7 @@ This function updates the displayimg.gif in /current-img/
 
 
 def switchBar(emotionInfo):
-    path2 = r"C:\Users\Jake\Documents\beachhacks2019\googlecloudapi\beachhacks-2019"
+    path2 = r"C:\Users\Kathy\Desktop\StreamerEnv\beachhacks-2019\beachhacks-2019"
     os.system("cd "+ path2)
     if (emotionInfo[0] != prevEmotion[0]):
         switch(r"%d" % round(emotionInfo[0]), path2, "display0")
