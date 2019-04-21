@@ -2,7 +2,7 @@ import cv2
 
 def take_a_pic():
     count = 0
-    video_capture = cv2.VideoCapture(0)
+    video_capture = cv2.VideoCapture(1)
     # Check success
     if not video_capture.isOpened():
         raise Exception("Could not open video device")
