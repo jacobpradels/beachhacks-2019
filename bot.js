@@ -22,4 +22,5 @@ client.connect();
 
 client.on('connected', function(address,port){
     client.action("beachhack_bot","POGGERS s in the chat");
+    process.exit(1); 
 });
