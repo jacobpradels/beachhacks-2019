@@ -30,9 +30,9 @@ def detect_faces(path):
             self.anger = anger
             self.joy = joy
             self.surprise = surprise
-
+    moodArray = []
     for face in faces:
-        mood = moodPoint(face.anger_likelihood,face.joy_likelihood,face.surprise_likelihood)
-    return mood
+        moodArray.append(moodPoint(face.anger_likelihood,face.joy_likelihood,face.surprise_likelihood))
+    return moodArray
 
 

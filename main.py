@@ -1,11 +1,21 @@
-from expression import detect_faces
-
-
+from googleface import detect_faces
+from screenshot import take_a_pic
+from calculatesalt import determineSalt
+import time
 emotionData = []
-emotionData.append(detect_faces("anger2.jpg"))
-print(emotionData[0].anger,emotionData[0].joy,emotionData[0].surprise)
 
-# while True:
-#     emotion = detect_faces("anger2.jpg")
-#     emotionData.append(emotion)
+def main():
+    take_a_pic()
+    try:
+        frame = detect_faces("frame0.jpg")
+        print(len(emotionData))
+        for people in frame:
+            emotionData.append(people)
+        for g in emotionData:
+            print(g.anger,g.joy,g.surprise)
+            print(determineSalt(emotionData))
+    except FileExistsError:
+        print('no faces')
 
+for x in range(3):
+    main()
